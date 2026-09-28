@@ -28,6 +28,13 @@
     "error-header": "Kein Element ausgewählt",
     "error-label": "Bitte wählen Sie ein Element aus"
   },
+  "update": {
+    "header": "Aktualisieren",
+    "title": "Bestätigen",
+    "confirm-label": "Möchten Sie wirklich aktualisieren: ",
+    "error-header": "Kein Element ausgewählt",
+    "error-label": "Bitte wählen Sie ein Element aus"
+  },
   "save": {
     "header": "Speichern",
     "title": "Bestätigen",

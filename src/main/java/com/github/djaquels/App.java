@@ -121,23 +121,28 @@ public class App extends Application {
          * Update/Edit select item in view
          * Save settings
          */
+        // Add
+        TextField pathField = new TextField();
+        pathField.setPromptText(mainWindow.getString("add-label"));
+
         // View actions
         userListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 handleSelection(true);
+                systemListView.getSelectionModel().clearSelection();
+                pathField.setText(newValue);
             }
         });
 
         systemListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 handleSelection(false);
+                userListView.getSelectionModel().clearSelection();
+                pathField.setText(newValue);
             }
         });
         remoteModeLabel = new Label("");
         remoteModeLabel.setStyle("-fx-text-fill: green; -fx-font-weight: bold;");
-        // Add
-        TextField pathField = new TextField();
-        pathField.setPromptText(mainWindow.getString("add-label"));
 
         Button addButton = new Button(mainWindow.getString("add"));
         addButton.setOnAction(e -> addPathAction(pathField.getText()));
@@ -273,9 +278,17 @@ public class App extends Application {
         JSONObject updateWindow = conf.getWindowLabels("update");
         if (selectedIndex != -1) {
             String itemToUpdate = activeList.get(selectedIndex);
+            String trimmed = newValue.trim();
+            if (trimmed.isEmpty()) {
+                showErrorDialog(updateWindow.getString("error-header"), updateWindow.getString("error-label"));
+                return;
+            }
+            if (trimmed.equals(itemToUpdate)) {
+                // No change made, nothing to update
+                return;
+            }
             if (userConfirmed(updateWindow, itemToUpdate)) {
-                deleteButtonAction(user, system, true);
-                addPathAction(newValue);
+                activeList.set(selectedIndex, trimmed);
             }
         } else {
             showErrorDialog(updateWindow.getString("error-header"), updateWindow.getString("error-label"));

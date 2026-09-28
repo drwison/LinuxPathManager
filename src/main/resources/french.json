@@ -28,6 +28,13 @@
     "error-header": "Aucun élément sélectionné",
     "error-label": "Veuillez sélectionner un élément"
   },
+  "update": {
+    "header": "Modifier",
+    "title": "Confirmer",
+    "confirm-label": "Êtes-vous sûr de vouloir modifier : ",
+    "error-header": "Aucun élément sélectionné",
+    "error-label": "Veuillez sélectionner un élément"
+  },
   "save": {
     "header": "Enregistrer",
     "title": "Confirmer",

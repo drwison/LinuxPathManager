@@ -28,6 +28,13 @@
         "error-header": "No item selected",
         "error-label": "Please select one item"
     },
+    "update": {
+        "header": "Update",
+        "title": "Confirm",
+        "confirm-label": "Are you sure you want to update: ",
+        "error-header": "No item selected",
+        "error-label": "Please select one item"
+    },
     "save": {
 	"header": "Save",
 	"title": "Confirm",

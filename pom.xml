@@ -138,12 +138,6 @@
 	</executions>
 	<configuration>
 	  <mainClass>com.github.djaquels.Main</mainClass>
-	  <options>
-	    <option>--module-path</option>
-	    <option>${javafx.module.path}</option>
-	    <option>--add-modules</option>
-	    <option>javafx.controls</option>
-	  </options>
 	</configuration>
        </plugin>
       <plugin>
