@@ -49,6 +49,18 @@ remote (SSH) management. Write clean, maintainable Java. Change only what your t
 - Ask before installing packages or changing the environment.
 - Don't modify code outside the current task.
 
+## Attribution (local)
+- Read `AGENTS.local.md` for your attribution identity (agent/model/harness/git email).
+- If it doesn't exist, create it from the template below and register yourself.
+- Append/update only your own line — never edit other agents' lines.
+- Never hardcode an agent identity in this file; the registry stays gitignored.
+
+Template for `AGENTS.local.md`:
+```
+# Local agent attribution (gitignored — do not commit)
+# One line per agent: agent | model | harness | git-noreply-email
+```
+
 ## Communication
 - Be brief. State what you changed and why. Mention tradeoffs or risks.
 
