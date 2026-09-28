@@ -36,6 +36,7 @@ remote (SSH) management. Write clean, maintainable Java. Change only what your t
 ## Doc Standard (mandatory)
 - Read `docs/DOC_TEMPLATE.md` before touching any doc.
 - Every README/SPEC edit: append a row to the Doc History footer (agent/model/harness) — don't rewrite history.
+- Never include email addresses in doc attribution (Doc History rows, headers, footers) — agent/model/harness only.
 - Doc commits: `doc(LinuxPathManager): [<agent>/<model>] <summary>`.
 - All commits: `<type>(LinuxPathManager): [<agent>/<model>|<harness>] <summary>`.
 - Commit your own doc edits.
